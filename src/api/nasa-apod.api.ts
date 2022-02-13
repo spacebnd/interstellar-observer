@@ -1,6 +1,6 @@
 import { AxiosRequestConfig } from 'axios'
 import { makeAxiosRequest, ApiResponse } from '@/api/axios'
-import { APOD } from '@/stores/nasa-apod.store'
+import { APOD } from '@/types/nasa-apod.types'
 
 const configDefaults: AxiosRequestConfig = {
   url: 'https://api.nasa.gov/planetary/apod',

@@ -1,20 +1,6 @@
 import { defineStore } from 'pinia'
 import nasaAPODApi from '@/api/nasa-apod.api'
-
-export type NasaAPODState = {
-  pictureData: APOD | null
-}
-
-export interface APOD {
-  copyright: string
-  date: string
-  explanation: string
-  hdurl: string
-  media_type: string
-  service_version: string
-  title: string
-  url: string
-}
+import { NasaAPODState } from '@/types/nasa-apod.types'
 
 export const useStore = defineStore('nasaAPOD', {
   state: () =>
