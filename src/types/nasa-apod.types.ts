@@ -1,14 +1,14 @@
 export interface NasaAPODState {
-  pictureData: APOD | null
+  lastImage: APODImage | null
 }
 
-export interface APOD {
-  copyright: string
-  date: string
-  explanation: string
-  hdurl: string
-  media_type: string
-  service_version: string
-  title: string
-  url: string
+export interface APODImage {
+  readonly copyright: string
+  readonly date: string
+  readonly explanation: string
+  readonly hdurl: string
+  readonly media_type: string
+  readonly service_version: string
+  readonly title: string
+  readonly url: string
 }

@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 
-export const useStore = defineStore('twitter-news', {
+export const useTwitterNewsStore = defineStore('twitterNews', {
   state: () => ({}),
   getters: {},
   actions: {

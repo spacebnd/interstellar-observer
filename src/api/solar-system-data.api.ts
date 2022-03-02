@@ -1,18 +1,16 @@
 import { AxiosRequestConfig } from 'axios'
 import { ApiResponse, makeAxiosRequest } from '@/api/axios'
-import { APODImage } from '@/types/nasa-apod.types'
+import { SolarSystemDataResponse } from '@/types/solar-system-data.types'
 
 const configDefaults: AxiosRequestConfig = {
-  // NASA Astronomy Picture of the Day
-  url: 'https://api.nasa.gov/planetary/apod',
+  // The Solar System OpenData
+  url: 'https://api.le-systeme-solaire.net/rest/bodies/',
   method: 'get',
-  params: {
-    api_key: process.env.VUE_APP_NASA_API_KEY,
-  },
+  params: {},
 }
 
 export default {
-  fetchAstronomyPictureOfTheDay(): ApiResponse<APODImage> {
+  fetchSolarSystemBodies(): ApiResponse<SolarSystemDataResponse> {
     const config = { ...configDefaults }
 
     return makeAxiosRequest(config)

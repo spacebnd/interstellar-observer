@@ -11,21 +11,6 @@ const APP_MODULES = {
   ALL_NEWS: 'ALL_NEWS',
 }
 
-const API_MODULES = {
-  NASA_APOD: 'NASA_APOD', // NASA Astronomy Picture of the Day
-  NASA_DONKI: 'NASA_DONKI', // NASA Space Weather Database Of Notifications, Knowledge, Information
-  NASA_EPIC: 'NASA_EPIC', // NASA Earth Polychromatic Imaging Camera
-  NASA_MARS_ROVER: 'NASA_MARS_ROVER', // NASA Mars Rover Photos
-  NASA_LIBRARY: 'NASA_LIBRARY', // NASA Image and Video Library
-  NASA_HORIZONS: 'NASA_HORIZONS', // NASA Horizons System
-  SOLAR_SYSTEM_DATA: 'SOLAR_SYSTEM_DATA', // The Solar System OpenData
-  ISS_LIVE: 'ISS_LIVE', // ISS High Definition Live Streaming Video of the Earth
-  WTIA: 'WTIA', // Where the International Space Station at
-  PISRN: 'PISRN', // People in Space Right Now
-  SPACEFLIGHT_NEWS: 'SPACEFLIGHT_NEWS', // Spaceflight News
-  TWITTER: 'TWITTER', // Embedded Twitter Timelines
-}
-
 const TWITTER_ACCOUNTS = {
   ISS: 'Space_Station',
   ISS_RESEARCH: 'ISS_Research',
@@ -43,4 +28,4 @@ const TWITTER_ACCOUNTS = {
   NASA_EXOPLANETS: 'NASAExoplanets',
 }
 
-export { APP_MODULES, API_MODULES, TWITTER_ACCOUNTS }
+export { APP_MODULES, TWITTER_ACCOUNTS }

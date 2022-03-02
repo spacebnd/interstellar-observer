@@ -1,24 +1,24 @@
 export interface TwitterWidget {
-  events: {
-    bind: () => void
-    unbind: () => void
-    trigger: () => void
+  readonly events: {
+    readonly bind: () => void
+    readonly unbind: () => void
+    readonly trigger: () => void
   }
-  init: boolean
-  ready: () => void
-  widgets: {
-    createDMButton: () => void
-    createFollowButton: () => void
-    createGridFromCollection: () => void
-    createHashtagButton: () => void
-    createMentionButton: () => void
-    createMoment: () => void
-    createPeriscopeOnAirButton: () => void
-    createShareButton: () => void
-    createTimeline: () => void
-    createTweet: () => void
-    createTweetEmbed: () => void
-    createVideo: () => void
-    load: (container?: HTMLElement | null) => void
+  readonly init: boolean
+  readonly ready: () => void
+  readonly widgets: {
+    readonly createDMButton: () => void
+    readonly createFollowButton: () => void
+    readonly createGridFromCollection: () => void
+    readonly createHashtagButton: () => void
+    readonly createMentionButton: () => void
+    readonly createMoment: () => void
+    readonly createPeriscopeOnAirButton: () => void
+    readonly createShareButton: () => void
+    readonly createTimeline: () => void
+    readonly createTweet: () => void
+    readonly createTweetEmbed: () => void
+    readonly createVideo: () => void
+    readonly load: (container?: HTMLElement | null) => void
   }
 }

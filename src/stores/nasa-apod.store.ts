@@ -1,11 +1,11 @@
 import { defineStore } from 'pinia'
-import nasaAPODApi from '@/api/nasa-apod.api'
 import { NasaAPODState } from '@/types/nasa-apod.types'
+import nasaAPODApi from '@/api/nasa-apod.api'
 
-export const useStore = defineStore('nasaAPOD', {
+export const useNasaAPODStore = defineStore('nasaAPOD', {
   state: () =>
     ({
-      pictureData: null,
+      lastImage: null,
     } as NasaAPODState),
   getters: {},
   actions: {
@@ -14,7 +14,7 @@ export const useStore = defineStore('nasaAPOD', {
       if (error) {
         console.error(error)
       } else {
-        this.pictureData = data
+        this.lastImage = data
       }
     },
   },

@@ -1,10 +1,10 @@
 import { AxiosRequestConfig } from 'axios'
 import { ApiResponse, makeAxiosRequest } from '@/api/axios'
-import { APODImage } from '@/types/nasa-apod.types'
+import { DONKIMessage } from '@/types/nasa-donki.types'
 
 const configDefaults: AxiosRequestConfig = {
-  // NASA Astronomy Picture of the Day
-  url: 'https://api.nasa.gov/planetary/apod',
+  // NASA Space Weather Database Of Notifications, Knowledge, Information
+  url: 'https://api.nasa.gov/DONKI/notifications',
   method: 'get',
   params: {
     api_key: process.env.VUE_APP_NASA_API_KEY,
@@ -12,7 +12,7 @@ const configDefaults: AxiosRequestConfig = {
 }
 
 export default {
-  fetchAstronomyPictureOfTheDay(): ApiResponse<APODImage> {
+  fetchSpaceWeatherMessages(): ApiResponse<DONKIMessage[]> {
     const config = { ...configDefaults }
 
     return makeAxiosRequest(config)

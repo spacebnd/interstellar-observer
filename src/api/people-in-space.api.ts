@@ -1,18 +1,16 @@
 import { AxiosRequestConfig } from 'axios'
 import { ApiResponse, makeAxiosRequest } from '@/api/axios'
-import { APODImage } from '@/types/nasa-apod.types'
+import { PeopleInSpaceResponse } from '@/types/people-in-space.types'
 
 const configDefaults: AxiosRequestConfig = {
-  // NASA Astronomy Picture of the Day
-  url: 'https://api.nasa.gov/planetary/apod',
+  // People in Space Right Now
+  url: 'http://api.open-notify.org/astros.json',
   method: 'get',
-  params: {
-    api_key: process.env.VUE_APP_NASA_API_KEY,
-  },
+  params: {},
 }
 
 export default {
-  fetchAstronomyPictureOfTheDay(): ApiResponse<APODImage> {
+  fetchPeopleInSpace(): ApiResponse<PeopleInSpaceResponse> {
     const config = { ...configDefaults }
 
     return makeAxiosRequest(config)
