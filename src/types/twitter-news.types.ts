@@ -1,3 +1,9 @@
+export interface TwitterNewsState {
+  widgetsStatus: WidgetsStatus
+}
+
+type WidgetsStatus = null | 'loaded' | 'error'
+
 export interface TwitterWidget {
   readonly events: {
     readonly bind: () => void
